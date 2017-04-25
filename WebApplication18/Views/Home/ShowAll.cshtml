@@ -1,0 +1,21 @@
+﻿@using WebApplication18.Controllers
+@model WebApplication18.Controllers.ShowAllViewModel
+
+
+<table class="table table-hover table-striped table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>File Name</th>
+        <th>Image</th>
+    </tr>
+    @foreach (SimpleFile f in Model.Files)
+    {
+        <tr>
+            <td>@f.Name</td>
+            <td>@f.FileName</td>
+            <td>
+                <img src="/Images/@f.FileName" height="200"/>
+            </td>
+        </tr>
+    }
+</table>
